@@ -1,0 +1,272 @@
+.desktop {
+  background-color: #ffffff;
+  display: grid;
+  justify-items: center;
+  align-items: start;
+  width: 100vw;
+  min-height: 100vh;
+  height: 100%;
+}
+
+.desktop .div {
+  background-color: #ffffff;
+  width: 595px;
+  height: 733px;
+  position: relative;
+}
+
+.desktop .overlap-group {
+  position: absolute;
+  width: 595px;
+  height: 39px;
+  top: 0;
+  left: 0;
+  background-color: #d9d9d9;
+}
+
+.desktop .image {
+  width: 34px;
+  height: 34px;
+  top: 3px;
+  left: 0;
+  position: absolute;
+  object-fit: cover;
+}
+
+.desktop .ellipse {
+  position: absolute;
+  width: 138px;
+  height: 130px;
+  top: 53px;
+  left: 16px;
+  object-fit: cover;
+}
+
+.desktop .text-wrapper {
+  top: 52px;
+  left: 302px;
+  font-size: 36px;
+  position: absolute;
+  font-family: "Italianno-Regular", Helvetica;
+  font-weight: 400;
+  color: #000000;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.desktop .text-wrapper-2 {
+  top: 102px;
+  left: 249px;
+  font-size: 24px;
+  position: absolute;
+  font-family: "Italianno-Regular", Helvetica;
+  font-weight: 400;
+  color: #000000;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.desktop .img {
+  width: 414px;
+  height: 113px;
+  top: 480px;
+  left: 91px;
+  position: absolute;
+  object-fit: cover;
+}
+
+.desktop .text-wrapper-3 {
+  width: 359px;
+  top: 163px;
+  left: 228px;
+  font-size: 24px;
+  position: absolute;
+  font-family: "Italianno-Regular", Helvetica;
+  font-weight: 400;
+  color: #000000;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.desktop .text-wrapper-4 {
+  width: 359px;
+  top: 250px;
+  left: 221px;
+  font-size: 24px;
+  position: absolute;
+  font-family: "Italianno-Regular", Helvetica;
+  font-weight: 400;
+  color: #000000;
+  letter-spacing: 0;
+  line-height: normal;
+}
+/* Original CSS will be injected here */
+
+/* Semantic refactoring with improved naming and structure */
+.desktop {
+  background-color: #ffffff;
+  display: grid;
+  justify-items: center;
+  align-items: start;
+  width: 100vw;
+  min-height: 100vh;
+  height: 100%;
+}
+
+.profile-container {
+  background-color: #ffffff;
+  width: 595px;
+  height: 733px;
+  position: relative;
+}
+
+.profile-header {
+  position: absolute;
+  width: 100%;
+  height: 39px;
+  top: 0;
+  left: 0;
+  background-color: #d9d9d9;
+}
+
+.menu-icon {
+  width: 34px;
+  height: 34px;
+  top: 3px;
+  left: 0;
+  position: absolute;
+  object-fit: cover;
+}
+
+.profile-picture {
+  position: absolute;
+  width: 138px;
+  height: 130px;
+  top: 53px;
+  left: 16px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.profile-name {
+  top: 52px;
+  left: 302px;
+  font-size: 36px;
+  position: absolute;
+  font-family: "Italianno-Regular", Helvetica;
+  font-weight: 400;
+  color: #000000;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.profile-school {
+  top: 102px;
+  left: 249px;
+  font-size: 24px;
+  position: absolute;
+  font-family: "Italianno-Regular", Helvetica;
+  font-weight: 400;
+  color: #000000;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.profile-footer-image {
+  width: 414px;
+  height: 113px;
+  top: 480px;
+  left: 91px;
+  position: absolute;
+  object-fit: cover;
+}
+
+.profile-intro {
+  width: 359px;
+  top: 163px;
+  left: 228px;
+  font-size: 24px;
+  position: absolute;
+  font-family: "Italianno-Regular", Helvetica;
+  font-weight: 400;
+  color: #000000;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.profile-hobbies {
+  width: 359px;
+  top: 250px;
+  left: 221px;
+  font-size: 24px;
+  position: absolute;
+  font-family: "Italianno-Regular", Helvetica;
+  font-weight: 400;
+  color: #000000;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+/* Additional styles for new semantic elements */
+.profile-hobbies h3 {
+  margin-bottom: 8px;
+  font-weight: 400;
+}
+
+.profile-hobbies ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.profile-hobbies li {
+  position: relative;
+  padding-left: 20px;
+  margin-bottom: 4px;
+  line-height: 1.4;
+}
+
+.profile-hobbies li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+/* Responsive improvements */
+@media (max-width: 600px) {
+  .profile-container {
+    width: 100%;
+    height: auto;
+    padding-bottom: 20px;
+  }
+
+  .profile-picture,
+  .profile-name,
+  .profile-school,
+  .profile-intro,
+  .profile-hobbies,
+  .profile-footer-image {
+    position: relative;
+    left: auto;
+    top: auto;
+    margin: 10px auto;
+  }
+
+  .profile-picture {
+    display: block;
+    margin-top: 50px;
+  }
+
+  .profile-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 50px;
+  }
+
+  .profile-footer-image {
+    max-width: 100%;
+    height: auto;
+  }
+}
