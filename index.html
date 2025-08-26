@@ -1,35 +1,247 @@
 <!DOCTYPE html>
 <html lang="th">
-  <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta charset="utf-8" />
-    <title>นายอัณณกฤช สุทิน - โปรไฟล์</title>
-    <meta name="description" content="ประวัติส่วนตัวของนายอัณณกฤช สุทิน จากโรงเรียนสวนกุหลาบวิทยาลัยนนทบุรี" />
-    <link rel="stylesheet" href="globals.css" />
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <main class="desktop">
-      <section class="profile-container">
-        <header class="profile-header">
-          <img class="menu-icon" src="img/image-3.png" alt="เมนู" />
-        </header>
-        <div class="profile-content">
-          <img class="profile-picture" src="img/ellipse-1.png" alt="รูปโปรไฟล์ของนายอัณณกฤช สุทิน" />
-          <h1 class="profile-name">นายอัณณกฤช สุทิน</h1>
-          <h2 class="profile-school">โรงเรียนสวนกุหลาบวิทยาลัยนนทบุรี</h2>
-          <p class="profile-intro">สวัสดีครับผมชื่อโชแปงเด็กสวนกุหลาบวิทยาลัยนนทบุรีครับ</p>
-          <div class="profile-hobbies">
-            <h3>งานอดิเรก</h3>
-            <ul>
-              <li>ออกกำลังกาย</li>
-              <li>ฟังพอดแคสต์</li>
-              <li>หาความรู้เกี่ยวกับสิ่งที่ตัวเองไม่รู้</li>
-            </ul>
-          </div>
-          <img class="profile-footer-image" src="img/image-2.png" alt="รูปประกอบ" />
-        </div>
-      </section>
-    </main>
-  </body>
+<head>
+  <meta charset="UTF-8">
+  <title>เว็บไซต์แนะนำตัว - อัณณกฤช สุทิน</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Sarabun:wght@300;500;700&display=swap');
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Sarabun', sans-serif;
+      background: linear-gradient(to right, #e0f7fa, #f1f8e9);
+      color: #333;
+    }
+
+    header {
+      background-color: #263238;
+      color: white;
+      padding: 15px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    }
+
+    .menu-icon {
+      cursor: pointer;
+      width: 30px;
+      height: 22px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .menu-icon div {
+      height: 4px;
+      background-color: white;
+      border-radius: 2px;
+    }
+
+    .sidebar {
+      position: fixed;
+      top: 0;
+      left: -250px;
+      width: 250px;
+      height: 100%;
+      background-color: #37474f;
+      color: white;
+      padding: 60px 20px;
+      transition: left 0.3s ease;
+      z-index: 1000;
+    }
+
+    .sidebar.active {
+      left: 0;
+    }
+
+    .sidebar ul {
+      list-style: none;
+    }
+
+    .sidebar ul li {
+      padding: 15px 10px;
+      cursor: pointer;
+      border-bottom: 1px solid #546e7a;
+      font-size: 1.1em;
+    }
+
+    .sidebar ul li:hover {
+      background-color: #455a64;
+    }
+
+    .content {
+      padding: 40px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .section {
+      display: none;
+    }
+
+    .section.active {
+      display: block;
+      animation: fadeIn 0.5s ease;
+    }
+
+    @keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
+
+    h1 {
+      color: #00796b;
+      margin-bottom: 20px;
+      font-size: 2em;
+    }
+
+    .card {
+      background: white;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      margin-bottom: 30px;
+    }
+
+    .profile {
+      text-align: center;
+    }
+
+    .profile img {IMG_7069.JPG
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      border: 4px solid #00bcd4;
+      object-fit: cover;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+      margin-bottom: 15px;
+    }
+
+    .quote {
+      font-style: italic;
+      color: #009688;
+      margin: 15px 0;
+    }
+
+    .intro {
+      font-size: 1.1em;
+      line-height: 1.8;
+      color: #444;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+
+    table, th, td {
+      border: 1px solid #ccc;
+    }
+
+    th, td {
+      padding: 10px;
+      text-align: left;
+    }
+
+    th {
+      background-color: #e0f2f1;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="menu-icon" onclick="toggleMenu()">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    <h2>อัณณกฤช สุทิน</h2>
+  </header>
+
+  <div class="sidebar" id="sidebar">
+    <ul>
+      <li onclick="showSection('home')">หน้าแรก</li>
+      <li onclick="showSection('work')">ผลงาน</li>
+      <li onclick="showSection('skills')">ประสบการณ์และทักษะ</li>
+      <li onclick="showSection('contact')">ติดต่อ</li>
+      <li onclick="showSection('honor')">เกียรติประวัติ</li>
+    </ul>
+  </div>
+
+  <div class="content">
+    <div id="home" class="section active">
+      <div class="card profile">
+        <img src="profile.jpg" alt="รูปโปรไฟล์">
+        <h1>เกี่ยวกับประวัติ</h1>
+        <p class="quote">“เรียนรู้เพื่อเติบโต ค้นหาเพื่อเข้าใจ”</p>
+        <p class="intro">
+          สวัสดีครับ ผมชื่ออัณณกฤช สุทิน เป็นนักเรียนจากโรงเรียนสวนกุหลาบวิทยาลัยนนทบุรี<br>
+          สนใจด้านการพัฒนาตนเอง การเงิน และการเรียนรู้สิ่งใหม่ ๆ<br>
+          งานอดิเรกของผมคือออกกำลังกาย ฟังพอดแคสต์ และหาความรู้เกี่ยวกับการเงิน
+        </p>
+      </div>
+
+      <div class="card">
+        <h2>ประวัติการศึกษา</h2>
+        <table>
+          <tr><th>ปี</th><th>สถานศึกษา</th></tr>
+          <tr><td>2011 - 2019</td><td>โรงเรียนสารสาสน์วิเทศราชพฤกษ์</td></tr>
+          <tr><td>2020 - 2022</td><td>โรงเรียนสวนกุหลาบวิทยาลัยนนทบุรี</td></tr>
+          <tr><td>2023 - 2025</td><td>โรงเรียนสวนกุหลาบวิทยาลัยนนทบุรี</td></tr>
+        </table>
+      </div>
+    </div>
+
+    <div id="work" class="section">
+      <div class="card">
+        <h1>ผลงาน</h1>
+        <p>แสดงโครงงาน กิจกรรม หรือการแข่งขันที่เคยเข้าร่วม เช่น วิทยาศาสตร์, Coding, หรือกิจกรรมเพื่อสังคม</p>
+      </div>
+    </div>
+
+    <div id="skills" class="section">
+      <div class="card">
+        <h1>ประสบการณ์และทักษะ</h1>
+        <p>ทักษะด้านการสื่อสาร การทำงานเป็นทีม การใช้โปรแกรมคอมพิวเตอร์ และการเรียนรู้ด้วยตนเอง</p>
+      </div>
+    </div>
+
+    <div id="contact" class="section">
+      <div class="card">
+        <h1>ติดต่อ</h1>
+        <p>อีเมล: annakit@example.com<br>โทรศัพท์: 08x-xxx-xxxx</p>
+      </div>
+    </div>
+
+    <div id="honor" class="section">
+      <div class="card">
+        <h1>เกียรติประวัติ</h1>
+        <p>รางวัลหรือประกาศนียบัตรที่ได้รับ เช่น แข่งขันวิทยาศาสตร์, การเขียนโปรแกรม, หรือกิจกรรมจิตอาสา</p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById('sidebar').classList.toggle('active');
+    }
+
+    function showSection(id) {
+      const sections = document.querySelectorAll('.section');
+      sections.forEach(section => section.classList.remove('active'));
+      document.getElementById(id).classList.add('active');
+      document.getElementById('sidebar').classList.remove('active');
+    }
+  </script>
+
+</body>
 </html>
